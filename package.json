@@ -1,6 +1,6 @@
 {
   "name": "version-incrementer",
-  "version": "1.0.26",
+  "version": "1.0.0",
   "description": "increment the version in your package.json",
   "main": "bin/index.js",
   "module": "src/index.ts",
@@ -9,15 +9,22 @@
     "dev": "tsc -w",
     "push": "tsc; git add .; npm version patch --force; git commit -m 'update'; git push; npm publish"
   },
-  "keywords": [],
+  "keywords": [
+    "version",
+    "increment",
+    "package.json",
+    "node"
+  ],
   "author": "Jonas Bott",
   "license": "MIT",
   "type": "module",
   "repository": {
     "type": "git",
-    "url": "https://github.com/Jonas22rr/version-incrementer.git"
+    "url": "git+https://github.com/Jonas22rr/version-incrementer.git"
   },
-  "bin": "./bin/index.js",
+  "bin": {
+    "version-incrementer": "bin/index.js"
+  },
   "files": [
     "bin/"
   ],
@@ -30,6 +37,11 @@
     "typescript": "^4.9.4"
   },
   "dependencies": {
+    "is-odd": "^3.0.1",
     "prompts": "^2.4.2"
-  }
+  },
+  "bugs": {
+    "url": "https://github.com/Jonas22rr/version-incrementer/issues"
+  },
+  "homepage": "https://github.com/Jonas22rr/version-incrementer#readme"
 }
