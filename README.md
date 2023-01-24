@@ -18,7 +18,7 @@ or globally
 npm install -g package-version-incrementer
 ```
 
-use following command in terminal to increment the version in package.json
+use following command in terminal to increment the version of your package.json
 
 ```bash
 npx package-version-incrementer

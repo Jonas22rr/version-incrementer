@@ -1,13 +1,16 @@
 {
   "name": "package-version-incrementer",
-  "version": "1.0.1",
+  "version": "1.0.3",
   "description": "increment the version in your package.json",
   "main": "bin/index.js",
   "module": "src/index.ts",
   "scripts": {
     "start": "tsc; node ./bin/index.js",
     "dev": "tsc -w",
-    "push": "tsc; git add .; npm version patch --force; git commit -m 'update'; git push; npm publish"
+    "push": "tsc; git add .; npm version patch --force; git commit -m 'update'; git push; npm publish",
+    "increment": "npx package-version-incrementer",
+    "publish": "npm run increment && tsc && npm run publicPublish",
+    "publicPublish": "npm publish --access public"
   },
   "keywords": [
     "version",
